@@ -15,6 +15,7 @@ header{
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 999;
     width: 100%;
     height: 30px;
     text-align: right;
@@ -50,12 +51,6 @@ main>.row{
     max-width: 1428px;
 }
 
-main>.row img{
-    /* display: block; */
-    /* max-width: 100%; */
-    /* object-fit: cover; */
-}
-
 main .row>div{
     position: relative;
     width: 200px;
@@ -73,13 +68,6 @@ main>.row div>.label{
     padding: 4px;
 }
 
-
-
-
-
-
-
-
 footer{
     position: fixed;
     bottom: 0;
@@ -87,30 +75,54 @@ footer{
     width: 100%;
     height: 65px;
     background-color: #222222;
+    display: flex;
+    justify-content: space-between;
 }
 
 footer>div{
     height: 100%;
-    display: inline-block;
-    vertical-align: middle;
+    display: flex;
 }
 
 footer a{
     text-decoration: none;
     color: white;
     font-size: 11px;
-    padding: 10px;
     border-radius: 2px;
-    margin: 0 5px;
-    display: block;
+    display: inline-block;
     height: 100%;
-
-}
-
-footer a i.fa-microphone{
-    font-size: 20px;
+    display: flex;
 }
 
 footer a>div{
     height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 0 10px;
+}
+
+footer a i.fa-angle-up{
+    font-size: 11px;
+}
+
+footer a i{
+    font-size: 20px;
+}
+
+footer a i.fa-share-square{
+    color: #4bc800;
+}
+
+footer a.end{
+    text-decoration: none;
+    background-color: #4a4a4a;
+    color: red;
+    font-size: 11px;
+    display: inline-block;
+    height: 100%;
+    line-height: 65px;
+    padding: 0 20px;
 }
